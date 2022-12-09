@@ -18,11 +18,11 @@ public class H2PersonApplication {
 	CommandLineRunner commandLineRunner(PersonRepository repository) {
 		return args -> {
 			//add some people data
-			repository.save(new Person(null, "Marcus","Icaro", "1,77m", "77kg"));
-			repository.save(new Person(null, "Lucas","Minoro", "1,70m", "80kg"));
-			repository.save(new Person(null, "Cinthia","Masunaga", "1,60m", "60kg"));
-			repository.save(new Person(null, "Pedro","Masunaga", "1,79m", "85kg"));
-			repository.save(new Person(null, "Mariza","Moraes", "1,63m", "65kg"));
+			repository.save(new Person(null, "Marcus","Icaro", 1.77, 77.2, 29));
+			repository.save(new Person(null, "Lucas","Minoro", 1.70, 80, 29));
+			repository.save(new Person(null, "Cinthia","Masunaga", 1.60, 60, 29));
+			repository.save(new Person(null, "Pedro","Masunaga", 1.79, 85, 27));
+			repository.save(new Person(null, "Mariza","Moraes", 1.63, 65, 60));
 		};
 	}
 }

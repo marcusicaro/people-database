@@ -2,8 +2,9 @@ create table person (
     id int auto_increment,
     name varchar(255) NOT NULL,
     surname varchar(255) NOT NULL,
-    weight varchar(255) NOT NULL,
-    height varchar(255) NOT NULL
+    weight double NOT NULL,
+    height double NOT NULL,
+    age int NOT NULL
 );
 
 --insert into person(name, surname, weight, height) values('Marcus', 'Icaro', '1.78kg', '1.77m' );
