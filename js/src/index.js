@@ -7,13 +7,14 @@ function populateTableBody(obj) {
   const surname = document.createElement('td');
   surname.textContent = obj.surname;
   const height = document.createElement('td');
-  height.textContent = obj.height;
+  height.textContent = (obj.height).toFixed(2);
   const weight = document.createElement('td');
   weight.textContent = obj.weight;
   const age = document.createElement('td');
   age.textContent = obj.age;
   const imcCalc = document.createElement('td');
-  imcCalc.textContent = (obj.weight / (obj.height * obj.height)).toFixed(2);
+  const imc = (obj.weight / (obj.height * obj.height));
+  imcCalc.textContent = imc.toFixed(2);
 
   container.appendChild(name);
   container.appendChild(surname);
@@ -46,3 +47,4 @@ async function getPersonData() {
 }
 
 getPersonData();
+
